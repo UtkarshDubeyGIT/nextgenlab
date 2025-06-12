@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
 import { FloatingNav } from "./ui/floating-navbar";
-
 import { CiHome } from "react-icons/ci";
-import { FaRegMessage } from "react-icons/fa6";
-import { FaRegUser } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
+import { ImInfo } from "react-icons/im";
 export function Navbar() {
   const navItems = [
     {
@@ -15,15 +14,15 @@ export function Navbar() {
     {
       name: "About Us",
       link: "/about",
-      icon: <FaRegUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <ImInfo className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Contact Us",
-      link: "/contact",
-      icon: (
-        <FaRegMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
-      ),
+      name: "Team",
+      link: "/team",
+      icon: <FaUsers className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
+
+
   ];
   return (
     <div className="relative  w-full">
