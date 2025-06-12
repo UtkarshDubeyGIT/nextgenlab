@@ -4,6 +4,7 @@ import { FloatingNav } from "./ui/floating-navbar";
 import { CiHome } from "react-icons/ci";
 import { FaUsers } from "react-icons/fa";
 import { ImInfo } from "react-icons/im";
+import { GrDocumentTest } from "react-icons/gr";
 export function Navbar() {
   const navItems = [
     {
@@ -12,15 +13,22 @@ export function Navbar() {
       icon: <CiHome  className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
+      name:"Research",
+      link: "/research",
+      icon: <GrDocumentTest className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
       name: "About Us",
       link: "/about",
       icon: <ImInfo className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
+  
     {
       name: "Team",
       link: "/team",
       icon: <FaUsers className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
+
 
 
   ];

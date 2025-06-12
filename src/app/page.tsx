@@ -16,7 +16,7 @@ export default function Home() {
       <ResearchAreas/> 
       <TimelineDemo/>
       {/* Meet the team section */}
-      <div className='pb-20'>
+      <section className='pb-20'>
         <div className="max-w-7xl mt-10 w-full rounded-xl mx-auto p-4 border border-neutral-200 grid grid-cols-1 md:grid-cols-3 justify-between items-center ">
         <div className="p-4 text-xl  md:text-5xl text-center font-sans w-fit font-bold text-neutral-800">
             Meet The Team
@@ -31,7 +31,7 @@ export default function Home() {
           
       </div>
       
-    </div>
+    </section>
     </div>
   );
 }
