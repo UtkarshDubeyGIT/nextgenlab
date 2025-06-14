@@ -1,6 +1,6 @@
 
 import { Hero } from '@/components/Hero';
-import { TextGenerate } from '@/components/TextGenerate';
+
 import { GlanceProjects } from '@/components/GlanceProjects';
 import ResearchAreas from '@/components/ResearchAreas';
 import { TimelineDemo } from '@/components/Timeline';

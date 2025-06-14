@@ -125,48 +125,7 @@ export default function AboutUs() {
             
           </section>
 
-      {/* Join the Team Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Team</h2>
-            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-              Are you passionate about cutting-edge research and innovation? 
-              We're always looking for talented individuals to join our mission 
-              of advancing the frontiers of technology.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                borderRadius="1.75rem"
-                className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
-              >
-                <span className="px-6 py-2">
-                  View Open Positions
-                </span>
-              </Button>
-              
-              <Button
-                borderRadius="1.75rem"
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
-              >
-                <span className="px-6 py-2">
-                  Submit Application
-                </span>
-              </Button>
-            </div>
-            
-            <div className="mt-8 text-sm text-gray-400">
-              <p>Questions about opportunities? Contact us at careers@nextgenlab.com</p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      
     </div>
   );
 }
