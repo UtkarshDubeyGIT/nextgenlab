@@ -12,12 +12,31 @@ export default function Contact() {
   };
   return (
     <div className="min-h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased px-2 sm:px-0 py-8">
+      <div className="flex items-center justify-center mb-6 pt-30">
+        <div className="relative w-16 h-16">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full blur-lg opacity-50"></div>
+          <svg
+            className="relative w-16 h-16 text-white animate-bounce"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-18 8h18a2 2 0 002-2V8a2 2 0 00-2-2H3a2 2 0 00-2 2v6a2 2 0 002 2z"
+            />
+          </svg>
+        </div>
+      </div>
       <div className="shadow-input mx-auto my-auto w-full max-w-lg rounded-none bg-transparent p-2 sm:p-4 md:rounded-2xl md:p-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-neutral-100 dark:text-neutral-700">
-            Connect with Us
+          Connect with Us
         </h2>
         <p className="mt-2 max-w-sm text-xs sm:text-sm text-neutral-400 dark:text-neutral-300">
-            We would love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out using the form below.
+          We would love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out using the form below.
         </p>
 
         <form className="my-6 sm:my-8" onSubmit={handleSubmit}>
