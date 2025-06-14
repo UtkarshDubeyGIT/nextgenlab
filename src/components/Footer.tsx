@@ -29,13 +29,13 @@ export function Footer() {
   return (
     <div className="h-fit w-full bg-neutral-950 relative flex flex-col antialiased">
       <div className="w-full pt-5 flex flex-col text-white h-full z-40 justify-center">
-        <div className="grid grid-col-1 lg:grid-cols-4 md:flex-none font-sans px-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 font-sans px-4 sm:px-10 ">
 
 
           {/* left side */}
           <div className="col-span-2">
             <div className="">
-              <div className="left-align font-sans text-lg md:text-2xl py-5 text-neutral-100">
+              <div className="left-align font-sans text-base sm:text-lg md:text-2xl py-3 sm:py-5 text-neutral-100">
                 Stay Connected to be the first to know about our latest updates,
                 events, and opportunities.
               </div>
@@ -66,12 +66,12 @@ export function Footer() {
                           <input
                             type="text"
                             placeholder="Name"
-                            className="bg-neutral-100 text-black border-neutral-400 focus-visible:ring-[2px] focus-visible:ring-blue-400  border-1 rounded-sm w-3/6 p-1"
+                            className="bg-neutral-100 text-black border-neutral-400 focus-visible:ring-[2px] focus-visible:ring-blue-400  border-1 rounded-sm w-full sm:w-3/6 p-1"
                           />
                           <input
                             type="email"
                             placeholder="Email"
-                            className="bg-neutral-100 text-black border-neutral-400 focus-visible:ring-[2px] focus-visible:ring-blue-400  border-1 rounded-sm w-3/6 p-1"
+                            className="bg-neutral-100 text-black border-neutral-400 focus-visible:ring-[2px] focus-visible:ring-blue-400  border-1 rounded-sm w-full sm:w-3/6 p-1"
                           />
                           <button
                             type="submit"
@@ -90,9 +90,9 @@ export function Footer() {
 
 
           {/* middle part */}
-          <div className="col-span-1 flex flex-col md:justify-center text-neutral-100 md:pl-36 py-10 md:py-0">
-            <div className="text-3xl md:text-2xl  font-bold">Navigation</div>
-            <div className="text-neutral-300 text-xl py-2">
+          <div className="col-span-1 flex flex-col md:justify-center text-neutral-100 md:pl-0 lg:pl-36 py-6 md:py-0">
+            <div className="text-2xl md:text-2xl font-bold">Navigation</div>
+            <div className="text-neutral-300 text-base sm:text-xl py-2">
               <div>
                 <div>
                   <a href="nsut.ac.in">
@@ -130,11 +130,11 @@ export function Footer() {
 
 
           {/* right side */}
-          <div className=" col-span-1 flex flex-col item-center text-neutral-100 md:pl-30">
-            <div className="text-xl pb-4 ">
+          <div className=" col-span-1 flex flex-col item-center text-neutral-100 md:pl-0 lg:pl-30 mt-6 md:mt-0">
+            <div className="text-lg sm:text-xl pb-2 sm:pb-4 ">
               Follow us on our social media handles
             </div>
-            <div className="flex flex-row  justify-start text-3xl gap-x-5 text-neutral-300">
+            <div className="flex flex-row  justify-start text-2xl sm:text-3xl gap-x-4 sm:gap-x-5 text-neutral-300">
               <a
                 href="https://www.facebook.com/NextGenAILabsNSUT"
                 target="_blank"
@@ -162,10 +162,10 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="font-sans text-4xl md:text-9xl font-semibold text-neutral-200 text-center pt-20 pb-4">
+        <div className="font-sans text-2xl sm:text-4xl md:text-9xl font-semibold text-neutral-200 text-center pt-10 sm:pt-20 pb-2 sm:pb-4">
           NextGenAI Labs NSUT
         </div>
-        <div className="flex flex-col items-center py-3">
+        <div className="flex flex-col items-center py-2 sm:py-3">
           <div className="text-neutral-400 text-sm">
             © 2023 NextGenAI Labs NSUT. All rights reserved.
           </div>

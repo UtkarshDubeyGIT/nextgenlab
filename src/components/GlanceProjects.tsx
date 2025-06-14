@@ -9,8 +9,8 @@ export function GlanceProjects() {
   ));
 
   return (
-    <div className="w-full h-full py-20 ">
-      <h2 className="max-w-7xl pl-4 mx-auto pt-10 text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+    <div className="w-full h-full py-10 sm:py-16 md:py-20">
+      <h2 className="max-w-7xl pl-2 sm:pl-4 mx-auto pt-6 sm:pt-10 text-lg sm:text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
         Get to know about recent updates.
       </h2>
       <Carousel items={cards} />
