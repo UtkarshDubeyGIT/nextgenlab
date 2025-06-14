@@ -56,7 +56,7 @@ export default function AboutUs() {
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8 }}
+						transition={{ duration: 0.2 }}
 						className="text-center mt-10 sm:mt-20"
 					>
 						<h1 className="text-3xl sm:text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent mb-4 sm:mb-6 px-2">
@@ -74,11 +74,7 @@ export default function AboutUs() {
 			{/* What We Do Section */}
 			<section className="py-12 sm:py-16 lg:py-20 rounded-sm bg-gradient-to-br from-neutral-950 to-neutral-900">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8 }}
-						viewport={{ once: true }}
+					<div
 						className="text-center mb-8 sm:mb-16"
 					>
 						<h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6">
@@ -88,7 +84,7 @@ export default function AboutUs() {
 							Our multidisciplinary approach combines theoretical research with
 							practical applications to drive innovation across various domains.
 						</p>
-					</motion.div>
+					</div>
 
 					<HoverEffect items={whatWeDo} />
 				</div>

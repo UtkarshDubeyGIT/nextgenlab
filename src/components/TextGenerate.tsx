@@ -7,7 +7,7 @@ export function TextGenerate() {
   return (
     <TextGenerateEffect
       words={words}
-      className="flex justify-center mx-auto pt-1 mt-3 w-full max-w-5xl text-start text-base md:text-4xl font-sans px-2"
+      className="flex justify-center mx-auto pt-1 mt-3 w-full max-w-5xl text-start text-xl md:text-4xl font-sans px-10 md:px-2"
     />
   );
 }

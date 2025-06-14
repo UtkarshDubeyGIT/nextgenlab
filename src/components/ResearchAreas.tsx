@@ -51,9 +51,12 @@ const ResearchAreas = () => {
       </div>
       <div className='max-w-4xl mx-auto'>
         <Link href="/research">
-          <div className='font-sans bg-white text-black p-2 sm:p-3 px-3 sm:px-4 rounded-4xl m-2 sm:m-3 w-fit flex flex-row gap-2 sm:gap-3 items-center border-2 cursor-pointer hover:text-white hover:bg-neutral-800 duration-200'>
+          <div className='bg-gradient-to-br from-blue-700 to-pink-700 p-1 md:p-0.5 rounded-full hover:from-blue-800 hover:to-pink-800 duration-100 '>
+            <div className='font-sans bg-white text-black p-3 rounded-full w-fit flex flex-row gap-2 sm:gap-3 items-center border-2 cursor-pointer hover:text-white hover:bg-neutral-800 duration-200 animate-none'>
             Our Research and Publications <FaArrowRightLong/>
           </div>
+          </div>
+          
         </Link>
       </div>
       <div className='flex flex-col items-center justify-center p-2 sm:p-4 font-sans gap-4 sm:gap-5 max-w-7xl mx-auto'>
