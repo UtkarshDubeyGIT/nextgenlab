@@ -1,5 +1,5 @@
 import { Hero } from '@/components/Hero';
-
+import Link from 'next/link';
 import { GlanceProjects } from '@/components/GlanceProjects';
 import ResearchAreas from '@/components/ResearchAreas';
 import { TimelineDemo } from '@/components/Timeline';
@@ -24,9 +24,9 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center justify-center mt-4 md:mt-0">
             {/* <Link href="/research" ><div className='font-sans bg-white text-black p-3 px-4 rounded-4xl m-3 w-fit flex flex-row gap-3 items-center border-2 cursor-pointer' > Know More <FaArrowRightLong/></div></Link> */}
-            <button className="inline-flex h-10 sm:h-12 animate-shimmer items-center justify-center rounded-lg border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 sm:px-6 font-medium text-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            <Link href="/team" className="inline-flex h-10 sm:h-12 animate-shimmer items-center justify-center rounded-lg border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 sm:px-6 font-medium text-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
               Know More
-            </button>
+            </Link>
           </div>
         </div>
       </section>
