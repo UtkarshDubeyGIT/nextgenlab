@@ -33,7 +33,7 @@ export function Footer() {
 
 
           {/* left side */}
-          <div className="col-span-2">
+          <div className="col-span-1 md:col-span-2">
             <div className="">
               <div className="left-align font-sans text-base sm:text-lg md:text-2xl py-3 sm:py-5 text-neutral-100">
                 Stay Connected to be the first to know about our latest updates,
