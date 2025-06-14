@@ -278,7 +278,7 @@ export default function TeamPage() {
 							}}
 							index={index}
 							layout
-							onClick={() => handleCardClick(member)}
+							onClick={() => handleCardClick(member)} // Ensure `onClick` is supported in `Card` component
 						/>
 					))}
 				</div>

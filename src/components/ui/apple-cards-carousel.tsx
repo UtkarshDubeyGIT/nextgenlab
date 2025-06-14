@@ -21,6 +21,18 @@ interface CarouselProps {
   initialScroll?: number;
 }
 
+interface CardProps {
+  card: {
+    src: string;
+    title: string;
+    category: string;
+    content: React.ReactNode;
+  };
+  index: number;
+  layout?: boolean;
+  onClick?: () => void; // Add this line to support the `onClick` prop
+}
+
 type Card = {
   src: string;
   title: string;
@@ -153,15 +165,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   );
 };
 
-export const Card = ({
-  card,
-  index,
-  layout = false,
-}: {
-  card: Card;
-  index: number;
-  layout?: boolean;
-}) => {
+export const Card: React.FC<CardProps> = ({ card, index, layout, onClick }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const { onCardClose, currentIndex } = useContext(CarouselContext);
