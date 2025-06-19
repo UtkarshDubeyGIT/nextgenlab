@@ -30,12 +30,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## 📸 Screenshots
 
-| Home Page | Projects Carousel | Team Section |
-|-----------|------------------|--------------|
-| ![Home Screenshot]![image](https://github.com/user-attachments/assets/e4e0db43-3411-4832-8f79-86f0593ce4d9)
-| ![Projects Screenshot]![image](https://github.com/user-attachments/assets/b36678c6-d4bb-48d1-b139-b6181d809980)
-| ![Team Screenshot]![image](https://github.com/user-attachments/assets/1be55d84-2b04-478d-b309-2f9a893b79c8)
-|
+| Home Page |
+|-----------|
+| !Home Screenshot![image](https://github.com/user-attachments/assets/e4e0db43-3411-4832-8f79-86f0593ce4d9)
+| !Projects Screenshot![image](https://github.com/user-attachments/assets/b36678c6-d4bb-48d1-b139-b6181d809980)
+| !Team Screenshot![image](https://github.com/user-attachments/assets/1be55d84-2b04-478d-b309-2f9a893b79c8)
 
 ---
 
