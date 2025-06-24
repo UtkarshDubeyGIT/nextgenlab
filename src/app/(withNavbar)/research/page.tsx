@@ -67,6 +67,7 @@ const typeColors = {
 export default function ResearchPage() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+        <motion.div>
             <div className="container mx-auto px-4 py-12">
                 {/* Header Section */}
                 <motion.div
@@ -222,6 +223,7 @@ export default function ResearchPage() {
                     </Card>
                 </motion.div>
             </div>
+            </motion.div>
         </div>
     );
 }
