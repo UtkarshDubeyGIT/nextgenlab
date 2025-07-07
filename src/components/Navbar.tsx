@@ -6,7 +6,8 @@ import { FaUsers } from "react-icons/fa";
 import { ImInfo } from "react-icons/im";
 import { GrDocumentTest } from "react-icons/gr";
 export function Navbar() {
-  const navItems = [
+  const navItems =
+  [
     {
       name: "Home",
       link: "/",
@@ -22,14 +23,12 @@ export function Navbar() {
       link: "/about",
       icon: <ImInfo className="h-4 w-4 text-neutral-900 dark:text-white" />,
     },
-  
+
     {
       name: "Team",
       link: "/team",
       icon: <FaUsers className="h-4 w-4 text-neutral-900 dark:text-white" />,
     },
-
-
 
   ];
   return (

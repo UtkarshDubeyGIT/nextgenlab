@@ -9,7 +9,6 @@ export default async function DashboardLayout({
   return (
     <section>
       <Navbar />
-      <div>sdfsofnsof</div>
       <main>{children}</main>
       <Footer />
     </section>

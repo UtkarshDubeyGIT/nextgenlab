@@ -10,10 +10,14 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { login } from "@/app/(withoutNavbar)/login/actions";
+// Remove the import of GoogleIcon since the module cannot be found
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+
+
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
@@ -53,9 +57,11 @@ export function LoginForm({
                   type="submit"
                   className="w-full"
                   formAction={login}
-                  disabled={isPending}
                 >
-                  {isPending ? "Logging in..." : "Login"}
+                  Login
+                </Button>
+                <Button variant="outline" className="w-full">
+                  Login with Google 
                 </Button>
               </div>
             </div>
