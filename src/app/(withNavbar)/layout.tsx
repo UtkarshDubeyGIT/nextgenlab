@@ -1,17 +1,17 @@
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import React from "react";
-export default function ClientLayout({
-  children,
-}: Readonly<{
+import { Navbar } from "@/components/Navbar";
+
+export default async function DashboardLayout({
+  children
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <section >
-        <Navbar />
-        {children}
-        <Footer />
+    <section>
+      <Navbar />
+      <div>sdfsofnsof</div>
+      <main>{children}</main>
+      <Footer />
     </section>
-    
   );
 }

@@ -1,12 +1,9 @@
-import React from 'react'
-export default function DashboardLayout({
+import React from "react";
+
+export default function WithoutNavbarLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  return (
-    <section>
-      {children}
-    </section>
-  )
+  return <div className="min-h-screen">{children}</div>;
 }
