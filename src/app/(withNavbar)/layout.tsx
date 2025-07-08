@@ -9,7 +9,7 @@ export default async function DashboardLayout({
   return (
     <section>
       <Navbar />
-      <main>{children}</main>
+      <main className="">{children}</main>
       <Footer />
     </section>
   );

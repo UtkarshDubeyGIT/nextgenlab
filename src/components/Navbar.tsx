@@ -19,7 +19,7 @@ export function Navbar() {
       icon: <GrDocumentTest className="h-4 w-4 text-neutral-900 dark:text-white" />,
     },
     {
-      name: "About Us",
+      name: "About",
       link: "/about",
       icon: <ImInfo className="h-4 w-4 text-neutral-900 dark:text-white" />,
     },

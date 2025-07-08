@@ -48,7 +48,7 @@ const people = [
 
 export function TeamGlance() {
 	return (
-		<div className="flex flex-row flex-wrap items-center justify-center w-full gap-2 sm:gap-4">
+		<div className="max-w-5xl flex flex-row flex-wrap items-center justify-center gap-2 sm:gap-4">
 			<AnimatedTooltip items={people} />
 		</div>
 	);

@@ -159,7 +159,7 @@ export function TimelineDemo() {
     },
   ];
   return (
-    <div className="relative w-full overflow-clip">
+    <div className="relative w-full overflow-clip flex justify-center rounded-2xl">
       <Timeline data={data} />
     </div>
   );

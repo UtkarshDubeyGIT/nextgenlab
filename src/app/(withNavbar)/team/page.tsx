@@ -155,196 +155,192 @@ const SocialLinks = ({ social }: { social?: TeamMember["social"] }) => (
 );
 
 export default function TeamPage() {
-	const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
-	const handleCardClick = (member: TeamMember) => {
-		setSelectedMember(member);
-	};
+  const handleCardClick = (member: TeamMember) => {
+    setSelectedMember(member);
+  };
 
-	const handleClosePopup = () => {
-		setSelectedMember(null);
-	};
+  const handleClosePopup = () => {
+    setSelectedMember(null);
+  };
 
-	const head = team.find((member) => member.role === "Head");
-	const members = team.filter((member) => member.role !== "Head");
+  const head = team.find((member) => member.role === "Head");
+  const members = team.filter((member) => member.role !== "Head");
 
-	return (
-		<div className="bg-white min-h-screen">
-			{/* Hero Section */}
-			<div className="h-[40rem] w-full flex items-center justify-center bg-gradient-to-b from-neutral-100 to-neutral-300">
-				<div className="text-center px-4">
-					<h1 className="text-4xl md:text-6xl font-bold text-neutral-800">
-						Meet the Amazing Team
-					</h1>
-					<p className="mt-4 text-lg md:text-xl text-neutral-600">
-						Our team is a diverse group of passionate individuals dedicated to pushing the boundaries of technology and innovation.
-					</p>
-				</div>
-			</div>
+  return (
+    <div className="bg-neutral-50 min-h-screen">
+      {/* Hero Section */}
+      <div className="h-[22rem]  w-full flex items-center justify-center bg-gradient-to-b">
+        <div className="text-start px-4">
+          <h1 className="text-4xl md:text-6xl font-semibold text-slate-900 ">
+            Meet the Amazing Team
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-neutral-500">
+            Our team is a diverse group of passionate individuals dedicated to
+            pushing the boundaries of technology and innovation.
+          </p>
+        </div>
+      </div>
 
-			{/* Head Section */}
-			{head && (
-				<div className="max-w-7xl mx-auto px-4 py-16">
-					<h2 className="text-3xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-b from-neutral-600 to-neutral-900">
-						Leadership Vision
-					</h2>
-					<div className="grid md:grid-cols-2 gap-12 items-center">
-						<div className="relative">
-							<div className="aspect-square relative overflow-hidden rounded-2xl shadow-2xl">
-								<img
-									src={head.photo}
-									alt={head.name}
-									loading="lazy"
-									className="w-full h-full object-cover"
-								/>
-								<div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-							</div>
-						</div>
-						<div className="space-y-6">
-							<div>
-								<h3 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-2">
-									{head.name}
-								</h3>
-								<p className="text-lg text-neutral-600 mb-4">{head.description}</p>
-								<SocialLinks social={head.social} />
-							</div>
-							{head.vision && (
-								<div className="space-y-4">
-									<h4 className="text-xl font-semibold text-neutral-800">Vision Statement</h4>
-									<p className="text-neutral-600 leading-relaxed italic">
-										"{head.vision}"
-									</p>
-								</div>
-							)}
-							<div className="grid sm:grid-cols-2 gap-6">
-								<div>
-									<h4 className="text-lg font-semibold text-neutral-800 mb-3">Expertise</h4>
-									<div className="flex flex-wrap gap-2">
-										{head.expertise.map((skill, index) => (
-											<span
-												key={index}
-												className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-											>
-												{skill}
-											</span>
-										))}
-									</div>
-								</div>
-								{head.contributions && (
-									<div>
-										<h4 className="text-lg font-semibold text-neutral-800 mb-3">Key Contributions</h4>
-										<ul className="space-y-1">
-											{head.contributions.map((contribution, index) => (
-												<li key={index} className="text-sm text-neutral-600 flex items-start">
-													<span className="text-green-500 mr-2 mt-1">•</span>
-													{contribution}
-												</li>
-											))}
-										</ul>
-									</div>
-								)}
-							</div>
-						</div>
-					</div>
-				</div>
-			)}
+      {/* Head Section */}
+      {head && (
+        <div className="max-w-6xl w-full mx-auto px-4 flex flex-col justify-center ">
+          <h2 className="text-3xl md:text-4xl text-start mb-8 pl-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-600 to-neutral-900">
+            Leadership Vision
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative flex justify-center items-center">
+              <div className="aspect-square relative overflow-hidden rounded-full shadow-2xl h-[20rem] w-[20rem]">
+                <img
+                  src={head.photo}
+                  alt={head.name}
+                  loading="lazy"
+                  className="w-full h-full object-cover mx-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl md:text-3xl text-neutral-800 mb-2">
+                  {head.name}
+                </h3>
+                <p className="text-lg text-neutral-600 mb-4">
+                  {head.description}
+                </p>
+                <SocialLinks social={head.social} />
+              </div>
+              {head.vision && (
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-neutral-800">
+                    Vision Statement
+                  </h4>
+                  <p className="text-neutral-600 leading-relaxed italic">
+                    "{head.vision}"
+                  </p>
+                </div>
+              )}
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="text-lg font-semibold text-neutral-800 mb-3">
+                    Expertise
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {head.expertise.map((skill, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                {head.contributions && (
+                  <div>
+                    <h4 className="text-lg font-semibold text-neutral-800 mb-3">
+                      Key Contributions
+                    </h4>
+                    <ul className="space-y-1">
+                      {head.contributions.map((contribution, index) => (
+                        <li
+                          key={index}
+                          className="text-sm text-neutral-600 flex items-start"
+                        >
+                          <span className="text-green-500 mr-2 mt-1">•</span>
+                          {contribution}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
-			{/* Team Members Section */}
-			<div className="max-w-7xl mx-auto px-4 py-16">
-				<h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
-					Our Team
-				</h2>
-				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-					{members.map((member, index) => (
-						<Card
-							key={index}
-							card={{
-								src: member.photo,
-								title: member.name,
-								category: member.role,
-								content: (
-									<div>
-										<p className="text-neutral-600">{member.description}</p>
-										<div className="mt-4">
-											<h4 className="font-semibold">Expertise:</h4>
-											<ul className="list-disc list-inside">
-												{member.expertise.map((skill, i) => (
-													<li key={i}>{skill}</li>
-												))}
-											</ul>
-										</div>
-									</div>
-								),
-							}}
-							index={index}
-							layout
-							onClick={() => handleCardClick(member)} // Ensure `onClick` is supported in `Card` component
-						/>
-					))}
-				</div>
-			</div>
+      {/* Meet the Team Section */}
+      <div className="max-w-5xl w-full mx-auto px-2 sm:px-4 py-10 sm:py-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl text-center mb-6 sm:mb-10 text-slate-900">
+          Our Team
+        </h2>
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+          {members.map((member, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-xl shadow-md flex flex-col justify-between items-center p-4 sm:p-6 hover:shadow-lg transition-shadow duration-200 w-full min-h-[370px] sm:min-h-[400px]"
+            >
+              <img
+                src={member.photo}
+                alt={member.name}
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover mb-3 sm:mb-4 border-4 border-neutral-100 shadow"
+                loading="lazy"
+              />
+              <div className="flex-1 flex flex-col items-center w-full">
+                <h3 className="text-base sm:text-lg font-bold text-neutral-900 text-center mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-500 font-medium text-center mb-1 sm:mb-2">
+                  {member.role}
+                </p>
+                <p className="text-xs sm:text-sm text-neutral-600 text-center mb-2 sm:mb-3 break-words">
+                  {member.description}
+                </p>
+              </div>
+              <div className="mt-auto pt-2 w-full flex justify-center">
+                <SocialLinks social={member.social} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
-			{/* Popup for Selected Member */}
-			<AnimatePresence>
-				{selectedMember && (
-					<motion.div
-						className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
-					>
-						<motion.div
-							className="bg-white rounded-3xl p-6 max-w-lg w-full relative"
-							initial={{ scale: 0.8 }}
-							animate={{ scale: 1 }}
-							exit={{ scale: 0.8 }}
-						>
-							<button
-								className="absolute top-4 right-4 text-neutral-600 hover:text-neutral-800"
-								onClick={handleClosePopup}
-							>
-								✕
-							</button>
-							<div className="text-center">
-								{/* Add photo in popup */}
-								<img
-									src={selectedMember.photo}
-									alt={selectedMember.name}
-									className="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-lg"
-								/>
-								<h3 className="text-2xl font-bold">{selectedMember.name}</h3>
-								<p className="text-neutral-600">{selectedMember.role}</p>
-								<p className="mt-4 text-neutral-600">{selectedMember.description}</p>
-								<div className="mt-4">
-									<h4 className="font-semibold">Expertise:</h4>
-									<ul className="list-disc list-inside">
-										{selectedMember.expertise.map((skill, i) => (
-											<li key={i}>{skill}</li>
-										))}
-									</ul>
-								</div>
-								{selectedMember.contributions && (
-									<div className="mt-4">
-										<h4 className="font-semibold">Key Contributions:</h4>
-										<ul className="list-disc list-inside">
-											{selectedMember.contributions.map((item, i) => (
-												<li key={i}>{item}</li>
-											))}
-										</ul>
-									</div>
-								)}
-							</div>
-						</motion.div>
-					</motion.div>
-				)}
-			</AnimatePresence>
-		</div>
-	);
+      {/* Join Our Team Section */}
+      <div className="max-w-5xl mx-auto my-8 sm:my-12 p-4 sm:p-6 bg-white rounded-xl shadow flex flex-col sm:flex-row items-center justify-between gap-4 border border-neutral-100 text-center sm:text-left">
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 w-full sm:w-auto">
+          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-600 mb-2 sm:mb-0 sm:mr-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 11.25c2.485 0 4.5-2.015 4.5-4.5S14.485 2.25 12 2.25 7.5 4.265 7.5 6.75s2.015 4.5 4.5 4.5zm0 0c-3.728 0-6.75 1.567-6.75 3.5v2.25A2.25 2.25 0 007.5 19.5h9a2.25 2.25 0 002.25-2.25V14.75c0-1.933-3.022-3.5-6.75-3.5z"
+              />
+            </svg>
+          </span>
+          <span className="text-sm sm:text-base md:text-lg text-neutral-700 font-light">
+            Want to join be a part of us? We are growing our community.
+          </span>
+        </div>
+        <a
+          href="/join"
+          className="inline-flex items-center justify-center gap-2 px-2 sm:px-5 py-2 rounded-lg bg-blue-600 text-white  hover:bg-blue-700 transition-colors text-sm sm:text-base shadow w-full sm:w-auto"
+        >
+          Join our team
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-5 h-5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  );
 }
-
-// The code already implements:
-// - A hero section for the head with vision statement
-// - Responsive member cards with contact details, designation, and work contribution
-// - Uses Aceternity UI (Spotlight) and shadcn/ui style conventions
-// - Responsive grid layouts for all sections
-// No further changes needed as requirements are fully met.

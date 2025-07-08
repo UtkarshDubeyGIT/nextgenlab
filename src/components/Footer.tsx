@@ -9,6 +9,7 @@ import {
 import { FaFacebook } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { LuInstagram } from "react-icons/lu";
+import { FaLinkedin } from "react-icons/fa6";
 import { toast } from "sonner";
 
 export function Footer() {
@@ -30,12 +31,10 @@ export function Footer() {
     <div className="h-fit w-full bg-neutral-950 relative flex flex-col antialiased">
       <div className="w-full pt-5 flex flex-col text-white h-full z-40 justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 font-sans px-4 sm:px-10 ">
-
-
           {/* left side */}
           <div className="col-span-1 md:col-span-2">
             <div className="">
-              <div className="left-align font-sans text-base sm:text-lg md:text-2xl py-3 sm:py-5 text-neutral-100">
+              <div className="left-align font-sans text-base sm:text-lg md:text-xl  sm:py-5 text-neutral-100">
                 Stay Connected to be the first to know about our latest updates,
                 events, and opportunities.
               </div>
@@ -88,11 +87,10 @@ export function Footer() {
             </div>
           </div>
 
-
           {/* middle part */}
           <div className="col-span-1 flex flex-col md:justify-center text-neutral-100 md:pl-0 lg:pl-36 py-6 md:py-0">
-            <div className="text-2xl md:text-2xl font-bold">Navigation</div>
-            <div className="text-neutral-300 text-base sm:text-xl py-2">
+            <div className="text-2xl md:text-2xl font-semibold">Navigation</div>
+            <div className="text-neutral-300 text-base sm:text-xl py-2 font-light">
               <div>
                 <div>
                   <a href="nsut.ac.in">
@@ -108,7 +106,7 @@ export function Footer() {
                     </div>
                   </a>
                 </div>
-                
+
                 <div>
                   <a href="nsut.ac.in">
                     <div className="cursor-pointer hover:text-blue-500 pt-2">
@@ -128,10 +126,9 @@ export function Footer() {
             </div>
           </div>
 
-
           {/* right side */}
           <div className=" col-span-1 flex flex-col item-center text-neutral-100 md:pl-0 lg:pl-30 mt-6 md:mt-0">
-            <div className="text-lg sm:text-xl pb-2 sm:pb-4 ">
+            <div className="text-lg sm:text-xl pb-2 sm:pb-4 font-light">
               Follow us on our social media handles
             </div>
             <div className="flex flex-row  justify-start text-2xl sm:text-3xl gap-x-4 sm:gap-x-5 text-neutral-300">
@@ -139,9 +136,17 @@ export function Footer() {
                 href="https://www.facebook.com/NextGenAILabsNSUT"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-500 cursor-pointer"
+                className="hover:text-blue-400 cursor-pointer"
               >
                 <FaFacebook />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/nextgenailabsnsut" // Replace with actual LinkedIn URL if different
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-700 cursor-pointer"
+              >
+                <FaLinkedin />
               </a>
               <a
                 href="https://www.facebook.com/NextGenAILabsNSUT"
@@ -162,7 +167,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="font-sans text-2xl sm:text-4xl md:text-9xl font-semibold text-neutral-200 text-center pt-10 sm:pt-20 pb-2 sm:pb-4">
+        <div className="font-sans text-2xl sm:text-4xl md:text-[7.5rem] font-semibold text-neutral-300 text-center sm:pt-10 pb-2 sm:pb-4">
           NextGenAI Labs NSUT
         </div>
         <div className="flex flex-col items-center py-2 sm:py-3">
@@ -173,15 +178,12 @@ export function Footer() {
           <div>
             <a href="nsut.ac.in">
               <div className="cursor-pointer hover:text-blue-500 pt-4 pb-2 text-center">
-                
                 Netaji Subhash University of Technology, New Delhi
               </div>
-
             </a>
           </div>
         </div>
-        </div>
       </div>
-
+    </div>
   );
 }
